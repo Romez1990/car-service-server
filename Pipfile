@@ -10,5 +10,6 @@ python_version = "3.8"
 django = "*"
 python-dotenv = "*"
 psycopg2 = "*"
+djangorestframework = "*"
 
 [dev-packages]
