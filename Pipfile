@@ -11,5 +11,6 @@ django = "*"
 python-dotenv = "*"
 psycopg2 = "*"
 djangorestframework = "*"
+gunicorn = "*"
 
 [dev-packages]
