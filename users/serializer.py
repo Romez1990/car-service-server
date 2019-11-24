@@ -13,3 +13,11 @@ class ServiceDetailSerializer(ModelSerializer):
     class Meta:
         model = Service
         fields = '__all__'
+
+
+class ServiceWithUserSerializer(ModelSerializer):
+    user = UserDetailSerializer(read_only=True)
+
+    class Meta:
+        model = Service
+        fields = '__all__'
