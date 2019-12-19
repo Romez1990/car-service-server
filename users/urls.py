@@ -1,7 +1,8 @@
 from django.urls import path
 
 from .views import UserCreateView, UsersRetrieveUpdateDestroyView, \
-    UsersListView, ServiceCreateView, ServicesListView
+    UsersListView, ServiceCreateView, ServicesRetrieveUpdateDestroyView, \
+    ServicesListView
 
 app_name = 'users'
 urlpatterns = [
@@ -10,5 +11,7 @@ urlpatterns = [
          name='user.view'),
     path('users/', UsersListView.as_view(), name='user.view_list'),
     path('service/', ServiceCreateView.as_view(), name='service.create'),
+    path('service/<int:pk>/', ServicesRetrieveUpdateDestroyView.as_view(),
+         name='service.view'),
     path('services/', ServicesListView.as_view(), name='service.view_list'),
 ]

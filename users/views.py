@@ -27,3 +27,8 @@ class ServiceCreateView(CreateAPIView):
 class ServicesListView(ListAPIView):
     serializer_class = ServiceDetailSerializer
     queryset = Service.objects.all()
+
+
+class ServicesRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
+    serializer_class = ServiceDetailSerializer
+    queryset = Service.objects.all()
