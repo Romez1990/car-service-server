@@ -1,5 +1,5 @@
 from django.db.models import Model, CharField, TextField, FloatField, \
-    ForeignKey, CASCADE
+    DateTimeField, ForeignKey, CASCADE
 
 
 class User(Model):
@@ -12,3 +12,4 @@ class Service(Model):
     user = ForeignKey(User, verbose_name='User id', on_delete=CASCADE)
     description = TextField(verbose_name='Description')
     cost = FloatField(verbose_name='Cost')
+    datetime = DateTimeField(verbose_name='Datetime', auto_now=True)
