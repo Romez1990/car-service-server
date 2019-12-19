@@ -1,8 +1,8 @@
 from rest_framework.generics import CreateAPIView, ListAPIView
 
 from .models import User, Service
-from .serializer import UserDetailSerializer, ServiceDetailSerializer, \
-    ServiceWithUserSerializer
+from .serializer import UserDetailSerializer, ServiceSerializer, \
+    ServiceDetailSerializer
 
 
 class UserCreateView(CreateAPIView):
@@ -15,9 +15,9 @@ class UsersListView(ListAPIView):
 
 
 class ServiceCreateView(CreateAPIView):
-    serializer_class = ServiceDetailSerializer
+    serializer_class = ServiceSerializer
 
 
 class ServicesListView(ListAPIView):
-    serializer_class = ServiceWithUserSerializer
+    serializer_class = ServiceDetailSerializer
     queryset = Service.objects.all()
