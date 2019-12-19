@@ -10,6 +10,7 @@ class User(Model):
 
 class Service(Model):
     user = ForeignKey(User, verbose_name='User id', on_delete=CASCADE)
+    car_model = CharField(verbose_name='Car model', max_length=100)
     description = TextField(verbose_name='Description')
     cost = FloatField(verbose_name='Cost')
     datetime = DateTimeField(verbose_name='Datetime', auto_now=True)
