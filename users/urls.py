@@ -6,7 +6,7 @@ from .views import UserCreateView, UsersListView, ServiceCreateView, \
 app_name = 'users'
 urlpatterns = [
     path('user/', UserCreateView.as_view(), name='user.create'),
-    path('users/', UsersListView.as_view(), name='user.view'),
+    path('users/', UsersListView.as_view(), name='user.view_list'),
     path('service/', ServiceCreateView.as_view(), name='service.create'),
-    path('services/', ServicesListView.as_view(), name='service.view'),
+    path('services/', ServicesListView.as_view(), name='service.view_list'),
 ]
